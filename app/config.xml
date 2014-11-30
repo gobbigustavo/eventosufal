@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.snap.app" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Snap App Template</name>
+    <description>
+        An template App using angularJS, SnapJS and Cordova
+    </description>
+    <author email="iagobarboza@gmail.com" href="http://github.com/iagobarboza">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="DisallowOverscroll" value="true" />
+</widget>

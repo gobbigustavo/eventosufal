@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/snapjs/snap.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+
+    <!-- javascript libs -->
+    <script type="text/javascript" src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="bower_components/snapjs/snap.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src=""></script>
+
+    <!-- javascript app -->
+    <script type="text/javascript" src="app.js"></script>
+    <!-- javascript modules -->
+    <script type="text/javascript" src="app_modules/home/homeModule.js"></script>
+    <script type="text/javascript" src="app_modules/item-1/item1Module.js"></script>
+    <script type="text/javascript" src="app_modules/main-menu/mainMenuModule.js"></script>
+    <!-- title -->
+    <title>Snap Web App Template</title>
+</head>
+
+<body onload="prepareApp()" ng-controller='AppCtrl'>
+    
+    <!-- SNAP-LEFT -->
+    <div class="snap-drawers">
+        <div class="snap-drawer snap-drawer-left">
+            <ul>
+                <li ng-repeat='item in mainMenuItems' ng-click="mainMenuService.routeTo(item)">
+                    <div id="{{item.id}}" class="item-container {{item.initialItemClass}}">
+                        <span class="icons glyphicon {{item.icon}}"></span>
+                        <p>{{item.description}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- CONTENT -->
+    <div id="content" class="snap-content" style="background-color:red;">
+        <div id="toolbar"><span class="icons glyphicon glyphicon-align-justify" ng-click="openLeft()"></span><p ng-click="openLeft()">Menu</p></div>
+         <div id="scrollable-content-area">
+            <ng-view></ng-view>
+         </div>
+
+    </div>
+</body>
+
+    <script>
+        var prepareApp = function () {    
+            // document.addEventListener("deviceready", function () {
+                angular.bootstrap(document, ['tp.app']);
+                FastClick.attach(document.body);
+                document.getElementById('scrollable-content-area').style.height = (window.innerHeight - 50) + 'px';
+            // }, false);
+
+        }
+    </script>
+
+
+</html>

@@ -20,6 +20,7 @@
     "angular-sanitize": "~1.2.24",
     "snapjs": "~1.9.3",
     "angular-bootstrap": "~0.12.0",
-    "bootstrap": "~3.3.1"
+    "bootstrap": "~3.3.1",
+    "ngCordova": "~0.1.7-alpha"
   }
 }

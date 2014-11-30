@@ -12,7 +12,7 @@
     "url": "iagobarboza@gmail.com"
   },
   "homepage": "https://bitbucket.com/iagobarboza/angular-app-templates/snap-web-app",
-  "devDependencies": {
+  "dependencies": {
     "browser-sync": "^1.3.6",
     "gulp": "^3.8.8",
     "gulp-concat": "^2.4.0",
