@@ -14,8 +14,9 @@
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css" />
 
     <!-- javascript libs -->
-    <script type="text/javascript" src="bower_components/fastclick/lib/fastclick.js"></script>
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/ngCordova/dist/ng-cordova.js"></script>
+    <script type="text/javascript" src="bower_components/fastclick/lib/fastclick.js"></script>
     <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
     <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
     <script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script>
@@ -51,7 +52,7 @@
     </div>
     
     <!-- CONTENT -->
-    <div id="content" class="snap-content" style="background-color:red;">
+    <div id="content" class="snap-content">
         <div id="toolbar"><span class="icons glyphicon glyphicon-align-justify" ng-click="openLeft()"></span><p ng-click="openLeft()">Menu</p></div>
          <div id="scrollable-content-area">
             <ng-view></ng-view>
@@ -62,14 +63,15 @@
 
     <script>
         var prepareApp = function () {    
-            // document.addEventListener("deviceready", function () {
+            document.addEventListener("deviceready", function () {
                 angular.bootstrap(document, ['tp.app']);
                 FastClick.attach(document.body);
                 document.getElementById('scrollable-content-area').style.height = (window.innerHeight - 50) + 'px';
-            // }, false);
-
+            }, false);
         }
     </script>
+
+    <script type="text/javascript" src="cordova.js"></script>
 
 
 </html>

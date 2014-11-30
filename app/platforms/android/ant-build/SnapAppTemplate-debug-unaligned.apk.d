@@ -1,4 +1,4 @@
-/Library/WebServer/Documents/angular-app-templates/snap-mobile-app/app/platforms/android/ant-build/SnapAppTemplate-debug-unaligned.apk : \
-/Library/WebServer/Documents/angular-app-templates/snap-mobile-app/app/platforms/android/ant-build/SnapAppTemplate.ap_ \
-/Library/WebServer/Documents/angular-app-templates/snap-mobile-app/app/platforms/android/ant-build/classes.dex \
-/Library/WebServer/Documents/angular-app-templates/snap-mobile-app/app/platforms/android/CordovaLib/ant-build/classes.jar \
+C:\xampp\htdocs\eventosufal\app\platforms\android\ant-build\SnapAppTemplate-debug-unaligned.apk : \
+C:\xampp\htdocs\eventosufal\app\platforms\android\ant-build\SnapAppTemplate.ap_ \
+C:\xampp\htdocs\eventosufal\app\platforms\android\ant-build\classes.dex \
+C:\xampp\htdocs\eventosufal\app\platforms\android\CordovaLib\ant-build\classes.jar \
